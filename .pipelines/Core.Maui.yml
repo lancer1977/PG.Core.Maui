@@ -19,7 +19,7 @@ jobs:
   
   pool:
     #vmImage: windows-latest
-    name: Default 
+    name: Windows 
   steps:
   - checkout: self
   - task: DotNetCoreCLI@2
