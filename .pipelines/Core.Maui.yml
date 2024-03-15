@@ -9,7 +9,7 @@ variables:
 trigger:
   branches:
     include:
-    - refs/heads/master
+    - refs/heads/main
   paths:
     include:
     - src
@@ -19,7 +19,7 @@ jobs:
   
   pool:
     #vmImage: windows-latest
-    name: Windows 
+    name: Default 
   steps:
   - checkout: self
   - task: DotNetCoreCLI@2
