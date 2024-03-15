@@ -1,0 +1,1 @@
+These are mostly a collection of poorly implemented controls from my Xamarin days ported over to support classic apps. I really recommend not using these and considering alternatives at this point. I may update this eventually.

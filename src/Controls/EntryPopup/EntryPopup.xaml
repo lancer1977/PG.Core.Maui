@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<controls:PopupPageBase
+
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:s="clr-namespace:System;assembly=mscorlib"
+    xmlns:pages="clr-namespace:Mopups.Pages;assembly=Mopups"
+    xmlns:animations="clr-namespace:Mopups.Animations;assembly=Mopups"
+    xmlns:controls="clr-namespace:PolyhydraGames.Core.Maui.Controls;assembly=PolyhydraGames.Core.Maui"
+
+    x:Class="PolyhydraGames.Core.Maui.Controls.EntryPopup.EntryPopupPage"
+    mc:Ignorable="d"
+    Padding="50"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008">
+
+    <pages:PopupPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="Black" />
+        </Style>
+    </pages:PopupPage.Resources>
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1"
+            ScaleOut="1"
+            DurationIn="300"
+            DurationOut="100" />
+    </pages:PopupPage.Animation>
+
+    <Frame HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="15"
+           BackgroundColor="{DynamicResource defaultBackgroundColor}">
+        <StackLayout
+            IsClippedToBounds="True"
+            Padding="1"
+            Spacing="3"
+            BackgroundColor="Transparent">
+
+            <Label Text="{Binding Title}" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" TextColor="Black" />
+            <BoxView HorizontalOptions="FillAndExpand" Margin="0,4" Color="White" HeightRequest="1" />
+            <Label Text="{Binding Message}"
+                   IsVisible="{Binding Message,Converter={StaticResource StringToVisibilityConverter}}" />
+            <Entry Text="{Binding Value}" Keyboard="{Binding KeyboardType}" IsVisible="{Binding ShowEntry}"
+                   HorizontalOptions="FillAndExpand" />
+
+            <ListView ItemsSource="{Binding Choices}" IsVisible="{Binding ShowChoices}"
+                      ItemSelected="ListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding .}" />
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Grid ColumnDefinitions="*,Auto,Auto" HorizontalOptions="EndAndExpand" IsVisible="{Binding ShowButtons}">
+                <Button Grid.Column="1"
+                        Text="{Binding NegativeButtonText}"
+                        BorderColor="White"
+                        Padding="0,12"
+                        CornerRadius="11"
+                        BorderWidth="2"
+                        Command="{Binding OKCommand}">
+                    <Button.CommandParameter>
+                        <s:Boolean>False</s:Boolean>
+                    </Button.CommandParameter>
+                </Button>
+                <Button Text="{Binding PositiveButtonText}"
+                        IsVisible="{Binding PositiveButtonText, Converter={StaticResource StringToVisibilityConverter}}"
+                        Grid.Column="2"
+                        BorderColor="White"
+                        CornerRadius="11"
+                        BorderWidth="2"
+                        Command="{Binding OKCommand}">
+                    <Button.CommandParameter>
+                        <s:Boolean>True</s:Boolean>
+                    </Button.CommandParameter>
+                </Button>
+
+            </Grid>
+
+
+        </StackLayout>
+    </Frame>
+</controls:PopupPageBase>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<controls:PageBase xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:controls="clr-namespace:PolyhydraGames.Core.Maui.Controls;assembly=PolyhydraGames.Core.Maui"
+                   x:Class="PolyhydraGames.Core.Maui.Controls.Abstracts.ListWithClickPageBase"
+                   Title="{Binding Title}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding MenuCommand}" Text="Menu" />
+    </ContentPage.ToolbarItems>
+
+    <ListView x:Name="list" ItemsSource="{Binding Items}"
+              ItemSelected="OnItemSelected" BackgroundColor="Transparent">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Label Text="{Binding Name}" />
+                </ViewCell>
+
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+
+</controls:PageBase>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<pages:PopupPageBase xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                     xmlns:pages="clr-namespace:PolyhydraGames.Core.Maui.Controls;assembly=PolyhydraGames.Core.Maui"
+                     xmlns:animations="clr-namespace:Mopups.Animations;assembly=Mopups"
+                     x:Class="PolyhydraGames.Core.Maui.Controls.MultiPickerDialog.MultiPickerDialogPage">
+
+
+    <pages:PopupPageBase.Animation>
+        <animations:ScaleAnimation
+            PositionIn="Bottom"
+            PositionOut="Center"
+            ScaleIn="1"
+            ScaleOut="0.7"
+            DurationIn="700" />
+    </pages:PopupPageBase.Animation>
+
+    <Frame HorizontalOptions="Center"
+           VerticalOptions="Center"
+           x:Name="FrameContainer"
+           Margin="15"
+           BackgroundColor="White">
+        <StackLayout
+            IsClippedToBounds="True"
+            Padding="5, 5"
+            Spacing="3"
+            BackgroundColor="White">
+            <Label Text="{Binding Title}" HorizontalOptions="Center" />
+            <ListView x:Name="list" ItemsSource="{Binding Options}" VerticalOptions="FillAndExpand"
+                      HorizontalOptions="FillAndExpand"
+                      ItemSelected="Handle_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid HorizontalOptions="FillAndExpand">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <BoxView Grid.Column="0" WidthRequest="6" HeightRequest="6" RotationX="45" Color="Blue"
+                                         IsVisible="{Binding Selected}" Margin="0,2,0,0" />
+                                <Label Grid.Column="1" Text="{Binding Name}" HorizontalOptions="FillAndExpand"
+                                       VerticalTextAlignment="Center" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="  Ok  "
+                        BorderColor="Transparent"
+                        CornerRadius="11"
+                        BorderWidth="2"
+                        Command="{Binding OKCommand}" />
+                <Button
+                    Text=" Cancel "
+                    BorderColor="Transparent"
+                    CornerRadius="11"
+                    BorderWidth="2"
+                    Command="{Binding CancelCommand}" />
+                <Button
+                    Text=" Test "
+                    BorderColor="Transparent"
+                    CornerRadius="11"
+                    BorderWidth="2"
+                    Command="{Binding TestCommand}" />
+            </StackLayout>
+        </StackLayout>
+    </Frame>
+
+</pages:PopupPageBase>

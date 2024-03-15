@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<controls:PageBase xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:controls="clr-namespace:PolyhydraGames.Core.Maui.Controls;assembly=PolyhydraGames.Core.Maui"
+                   x:Class="PolyhydraGames.Core.Maui.Controls.Abstracts.Templates.BusyPageTemplate"
+                   Title="Login"
+                   BackgroundColor="#00263A"
+                   Padding="0,0,0,0">
+    <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+
+        <StackLayout Style="{StaticResource AbsoluteFull}" Spacing="20" x:Name="stackLayout"
+                     AbsoluteLayout.LayoutBounds="0, 0, 1, 1" />
+        <BoxView Style="{StaticResource FullScreenOpaque}" IsVisible="{Binding IsBusy}" />
+
+        <ActivityIndicator Style="{StaticResource ActivityIndicatorAbsoluteCenterPhone}" IsVisible="{Binding IsBusy}"
+                           IsRunning="{Binding IsBusy}" Color="White">
+            <!--<OnPlatform x:TypeArguments="T" />-->
+        </ActivityIndicator>
+
+    </AbsoluteLayout>
+</controls:PageBase>

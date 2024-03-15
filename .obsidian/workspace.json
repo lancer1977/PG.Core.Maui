@@ -1,0 +1,166 @@
+{
+  "main": {
+    "id": "34ea7bc9437b9f3e",
+    "type": "split",
+    "children": [
+      {
+        "id": "7eb8c8d6eeb7743b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "87b58a7e50243da2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "wiki/Tips/Limited Height Lists.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "6dbf05b0a2dcd10d",
+    "type": "split",
+    "children": [
+      {
+        "id": "d9fd812f50f37878",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ee25204f96c5418f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "88f0593937ff736c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "dfff77c83b8d674a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "8e4d4a4f519141b0",
+    "type": "split",
+    "children": [
+      {
+        "id": "9cc04feb7c551160",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c27de8492f96f7e6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "wiki/Tips/Limited Height Lists.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "fa474ac0f2d4c3dd",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "wiki/Tips/Limited Height Lists.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b870767c52d8a21f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "471e039178b91738",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "wiki/Tips/Limited Height Lists.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "87b58a7e50243da2",
+  "lastOpenFiles": [
+    "wiki/Tips/Notifications.md",
+    "wiki/Tips/Limited Height Lists.md",
+    "wiki/Tips/Popups.md",
+    "wiki/Tips",
+    "src/Extensions/PageHelpers.cs",
+    "src/Extensions/FrameExtensions.cs",
+    "src/Controls/MultiPickerDialog/NewPage1.xaml.cs",
+    "src/Controls/MultiPickerDialog/NewPage1.xaml",
+    "README.md",
+    "wiki/Converters.md",
+    "wiki/Models.md",
+    "wiki/Controls.md",
+    "Untitled.md",
+    "wiki"
+  ]
+}

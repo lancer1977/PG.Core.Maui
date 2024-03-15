@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PolyhydraGames.Core.Maui.Controls.ListPageBase">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding MenuCommand}" Text="Menu" />
+    </ContentPage.ToolbarItems>
+
+    <ListView x:Name="list" ItemsSource="{Binding Items}"
+              ItemSelected="OnItemSelected" BackgroundColor="Transparent">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Label Text="{Binding Name}" />
+                </ViewCell>
+
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

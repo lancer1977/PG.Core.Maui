@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<controls:PageBase xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:controls="clr-namespace:PolyhydraGames.Core.Maui.Controls;assembly=PolyhydraGames.Core.Maui"
+                   x:Class="PolyhydraGames.Core.Maui.Views.MenuPageBase"
+                   Title="{Binding Title}">
+    <StackLayout>
+        <Label Text="{Binding Title}" VerticalOptions="Center" HorizontalOptions="Center" />
+        <ListView x:Name="_menu" ItemSelected="OnItemSelected" ItemsSource="{Binding Items}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Title}" TextColor="Black" Detail="{Binding Description}"
+                              DetailColor="#02171F" Command="{Binding OnClick}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</controls:PageBase>
