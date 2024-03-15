@@ -1,12 +1,10 @@
-﻿using System.Globalization;
-using PolyhydraGames.Core.Maui.Extensions;
-using PolyhydraGames.Core.Maui.Helpers;
+﻿using PolyhydraGames.Core.Maui.Extensions;
 
 namespace PolyhydraGames.Core.Maui.Converters;
 
-public class HexStringToColorConverter : Converter<string,Color>
+public class HexStringToColorConverter : Converter<string, Color>
 {
- 
+
     protected override string T2ToT(Color value) => value.ToHex();
 
 

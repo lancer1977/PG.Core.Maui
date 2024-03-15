@@ -1,6 +1,4 @@
 using System.Text.RegularExpressions;
-using System;
-using System.Drawing;
 using Color = Microsoft.Maui.Graphics.Color;
 
 namespace PolyhydraGames.Core.Maui.Extensions;

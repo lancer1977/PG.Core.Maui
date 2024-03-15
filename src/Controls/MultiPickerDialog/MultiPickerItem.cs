@@ -1,27 +1,5 @@
 
-/* Unmerged change from project 'PolyhydraGames.Core.Maui (net7.0-ios)'
-Before:
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
 using ReactiveUI;
-After:
-using ReactiveUI;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-*/
-
-/* Unmerged change from project 'PolyhydraGames.Core.Maui (net7.0-windows10.0.22621.0)'
-Before:
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using ReactiveUI;
-After:
-using ReactiveUI;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-*/
-using ReactiveUI;
-using System.ComponentModel;
 
 namespace PolyhydraGames.Core.Maui.Controls.MultiPickerDialog;
 

@@ -1,6 +1,4 @@
-﻿using System.Globalization;
-
-namespace PolyhydraGames.Core.Maui.Converters;
+﻿namespace PolyhydraGames.Core.Maui.Converters;
 
 public class BooleanConverter : Converter<bool,bool>, IMarkupExtension
 {
