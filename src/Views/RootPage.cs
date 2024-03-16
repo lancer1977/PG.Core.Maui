@@ -2,6 +2,7 @@ using System.Diagnostics;
 
 namespace PolyhydraGames.Core.Maui.Views;
 
+
 public abstract class RootPageBase : FlyoutPage, IInitializeAsync
 {
     private readonly IViewFactoryAsync _viewFactory;

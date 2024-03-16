@@ -56,8 +56,7 @@ public class ViewFactoryAsync : IViewFactoryAsync
 
 
     }
-
-
+ 
     public async Task<Page> ResolveAsync(IViewModelAsync viewModel)
     {
         var viewType = GetMapType(viewModel.GetType());
@@ -88,6 +87,7 @@ public class ViewFactoryAsync : IViewFactoryAsync
         view.BindingContext = viewModel;
         return view;
     }
+
 
     private Page GetPage(Type viewtype)
     {

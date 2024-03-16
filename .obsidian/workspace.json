@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/Tips/Limited Height Lists.md",
+                "file": "wiki/Setup/Registration.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "wiki/Tips/Limited Height Lists.md",
+                "file": "wiki/Setup/Registration.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "wiki/Tips/Limited Height Lists.md",
+                "file": "wiki/Setup/Registration.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "wiki/Tips/Limited Height Lists.md"
+                "file": "wiki/Setup/Registration.md"
               }
             }
           }
@@ -148,19 +148,25 @@
   },
   "active": "87b58a7e50243da2",
   "lastOpenFiles": [
-    "wiki/Tips/Notifications.md",
+    "test/obj/Debug/net8.0/PolyhydraGames.Core.Maui.Test.sourcelink.json",
+    "test/bin/Debug/net8.0/CoverletSourceRootsMapping_PolyhydraGames.Core.Maui.Test",
+    "test/obj/Debug/net8.0/PolyhydraGames.Core.Maui.Test.csproj.CoreCompileInputs.cache",
+    "test/obj/Debug/net8.0/PolyhydraGames.Core.Maui.Test.AssemblyInfo.cs",
+    "test/obj/Debug/net8.0/PolyhydraGames.Core.Maui.Test.AssemblyInfoInputs.cache",
+    "test/obj/Debug/net8.0/PolyhydraGames.Core.Maui.Test.GeneratedMSBuildEditorConfig.editorconfig",
+    "test/obj/Debug/net8.0/PolyhydraGames.Core.Maui.Test.csproj.AssemblyReference.cache",
+    "src/obj/Debug/net8.0-android/android/src/androidx/lifecycle/livedata/core/ktx/R.java",
+    "src/obj/Debug/net8.0-android/android/src/com/bumptech/glide/gifdecoder/R.java",
+    "src/obj/Debug/net8.0-android/android/src/androidx/window/extensions/core/R.java",
+    "src/obj/Debug/net8.0-android/android/src/androidx/lifecycle/viewmodel/savedstate/R.java",
     "wiki/Tips/Limited Height Lists.md",
+    "wiki/Setup/Registration.md",
+    "wiki/Tips/Notifications.md",
     "wiki/Tips/Popups.md",
-    "wiki/Tips",
-    "src/Extensions/PageHelpers.cs",
-    "src/Extensions/FrameExtensions.cs",
-    "src/Controls/MultiPickerDialog/NewPage1.xaml.cs",
-    "src/Controls/MultiPickerDialog/NewPage1.xaml",
     "README.md",
     "wiki/Converters.md",
     "wiki/Models.md",
     "wiki/Controls.md",
-    "Untitled.md",
-    "wiki"
+    "Untitled.md"
   ]
 }

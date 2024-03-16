@@ -4,5 +4,5 @@ namespace PolyhydraGames.Core.Maui.Interfaces;
 //}
 
 public interface IViewFactoryAsync : IViewFactoryAsync<Page>
-{
+{ 
 }
