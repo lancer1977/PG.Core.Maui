@@ -12,17 +12,17 @@ public class ToggleBoolean : PropertyChangedBase
         get { return Get(); }
         set
         {
-                Set(value);
-                OnPropertyChanged();
-            }
+            Set(value);
+            OnPropertyChanged();
+        }
     }
     public string Title => _title;
 
     public ToggleBoolean(string title, Func<bool> get, Action<bool> set)
     {
-            _title = title;
-            Get = get;
-            Set = set;
-        }
+        _title = title;
+        Get = get;
+        Set = set;
+    }
 
 }
