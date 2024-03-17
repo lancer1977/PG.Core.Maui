@@ -6,20 +6,16 @@
              xmlns:views="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
              x:Class="PFAssistant.Maui.Controls.ExpandableView "
              x:Name="View">
-    <Frame BackgroundColor="{DynamicResource defaultBackgroundColor}">
-        <StackLayout>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                <StackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding Expand}" />
-                </StackLayout.GestureRecognizers>
-                <Label x:Name="TitleLabel"  HorizontalOptions="Start" />
-                <Label x:Name="SymbolLabel" TextColor="Black" />
-                <controls:LabelButton BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" Text="Add"
-                                      TextColor="Black" Command="{Binding MenuCommand}" />
-            </StackLayout>
 
-            <BoxView HeightRequest="2" Color="White" />
-            <views:Expander IsExpanded="{Binding IsExpanded}" x:Name="expand"/>
+    <StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" x:Name="titleStack">
+            <Label x:Name="TitleLabel"  HorizontalOptions="Start" />
+            <Label x:Name="SymbolLabel" TextColor="Black" />
+            <controls:LabelButton BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" Text="Add"
+                                      TextColor="Black" x:Name ="MenuButton" />
         </StackLayout>
-    </Frame>
+
+        <BoxView HeightRequest="2" Color="White" />
+        <views:Expander IsExpanded="{Binding IsExpanded}" x:Name="expand"/>
+    </StackLayout>
 </ContentView>

@@ -1,4 +1,5 @@
-﻿using CommunityToolkit.Maui.Views;
+﻿using System.Windows.Input;
+using CommunityToolkit.Maui.Views;
 
 
 namespace PFAssistant.Maui.Controls;
@@ -6,10 +7,17 @@ namespace PFAssistant.Maui.Controls;
 [XamlCompilation(XamlCompilationOptions.Compile)]
 public partial class ExpandableView : ContentView
 {
+    public ICommand TitleTapped { get; }
     public ExpandableView()
     {
         InitializeComponent();
         BindingContextChanged += OnBindingContextChanged;
+        TitleTapped = new Command(() =>
+        {
+            expand.IsExpanded = !expand.IsExpanded;
+        });
+
+        titleStack.GestureRecognizers.Add(new TapGestureRecognizer(){Command = TitleTapped });
     }
     public static readonly BindableProperty SymbolProperty =
       BindableProperty.Create(nameof(Symbol), typeof(string), typeof(ExpandableView), null, propertyChanged:
@@ -54,6 +62,20 @@ public partial class ExpandableView : ContentView
         get { return (IView)GetValue(ExpanderContentProperty); }
         set { SetValue(ExpanderContentProperty, value); }
     }
+
+    public static readonly BindableProperty MenuCommandProperty = BindableProperty.Create(nameof(MenuCommand), typeof(ICommand), typeof(ExpandableView), null, propertyChanged:
+        (bindable, value, newValue) =>
+        {
+            var view = (ExpandableView)bindable;
+            view.MenuButton.Command = newValue as ICommand;
+        });
+
+    public ICommand MenuCommand
+    {
+        get { return (ICommand)GetValue(MenuCommandProperty); }
+        set { SetValue(MenuCommandProperty, value); }
+    }
+
 
 
     protected Expander Expander { get; set; } = new();
