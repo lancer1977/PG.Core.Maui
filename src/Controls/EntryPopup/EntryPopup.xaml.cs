@@ -1,6 +1,4 @@
-﻿using PolyhydraGames.Core.Maui.Navigation;
-
-namespace PolyhydraGames.Core.Maui.Controls.EntryPopup;
+﻿namespace PolyhydraGames.Core.Maui.Controls.EntryPopup;
 
 public partial class EntryPopupPage
 {

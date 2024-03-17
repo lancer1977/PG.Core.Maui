@@ -1,6 +1,6 @@
+using System.Diagnostics;
 using Android.Content.Res;
 using PolyhydraGames.Core.Maui.Services.Abstract;
-using Environment = Android.OS.Environment;
 
 namespace PolyhydraGames.Core.Maui.Services.FileService;
 
@@ -35,7 +35,7 @@ public class FileService : ActivityServiceBase, IFileService
     {
             var tcs = new TaskCompletionSource<string[]>();
 
-            var path = Path.Combine(Environment.ExternalStorageDirectory?.AbsolutePath ?? throw new InvalidOperationException("storage directory was nothing"), directory);
+            var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal) ?? throw new InvalidOperationException("storage directory was nothing"));
             tcs.SetResult(Directory.Exists(path)
                 ? Directory.GetFiles(path).Select(File.ReadAllText).ToArray()
                 : new string[0]);

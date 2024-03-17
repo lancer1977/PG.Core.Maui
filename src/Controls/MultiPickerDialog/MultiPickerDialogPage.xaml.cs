@@ -1,6 +1,4 @@
-﻿using PolyhydraGames.Core.Maui.Navigation;
-
-namespace PolyhydraGames.Core.Maui.Controls.MultiPickerDialog;
+﻿namespace PolyhydraGames.Core.Maui.Controls.MultiPickerDialog;
 
 public partial class MultiPickerDialogPage : PopupPageBase
 {

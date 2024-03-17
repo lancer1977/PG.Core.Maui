@@ -1,8 +1,7 @@
 using Android.App;
-using Android.Widget;
-using PolyhydraGames.Core.Global.Extensions; 
+using Android.Widget; 
+using PolyhydraGames.Core.Global.Extensions;
 using PolyhydraGames.Core.Maui.Services.Abstract;
-using Toast = Android.Widget.Toast;
 
 //using PolyhydraGames.DialogServiceHelpers;
 namespace PolyhydraGames.Core.Maui.Services.Dialogs;

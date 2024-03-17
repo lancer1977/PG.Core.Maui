@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using Android.Content.PM;
 using PolyhydraGames.Core.Maui.Services;
 using PolyhydraGames.Core.Maui.Services.Abstract;

@@ -1,5 +1,3 @@
-using System.Reflection;
-
 namespace PolyhydraGames.Core.Maui.Controls;
 
 public static class FrameExtensions

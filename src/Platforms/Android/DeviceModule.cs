@@ -6,8 +6,7 @@ using PolyhydraGames.Core.Maui.Services.Email;
 using PolyhydraGames.Core.Maui.Services.FileService;
 using PolyhydraGames.Core.Maui.Services.Folders;
 using PolyhydraGames.Core.Maui.Services.StatusBar;
-using PolyhydraGames.Core.Maui.Services.WebsiteRequestors;
-
+using PolyhydraGames.Core.Maui.Services.WebsiteRequestors; 
 namespace PolyhydraGames.Core.Maui.Setup;
     /// <summary>
     /// </summary>
@@ -24,9 +23,8 @@ namespace PolyhydraGames.Core.Maui.Setup;
             builder.AddSingleton<IStatusBarManager, StatusBarManager>();
             builder.AddSingleton<IFileService,FileService >();
             builder.AddSingleton<IAvailiableAppsService,AvailiableAppsService>();
-           
             builder.AddSingleton<ICurrentActivityLocator,CurrentActivityLocatorService>();
-            //builder.RegisterSingleton<XamarinEssentialsSettingWrapper, ISettings>();
+            
             return builder;
         }
     }

@@ -13,8 +13,6 @@ After:
 using PolyhydraGames.Core.Interfaces;
 */
 
-using System.Reflection;
-
 namespace PolyhydraGames.Core.Maui.Setup;
 
 public static class MauiSetup

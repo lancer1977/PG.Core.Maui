@@ -1,6 +1,5 @@
 using Android.Content;
-using PolyhydraGames.Core.Maui.Services.Abstract;
-using Uri = Android.Net.Uri;
+using PolyhydraGames.Core.Maui.Services.Abstract; 
 
 namespace PolyhydraGames.Core.Maui.Services.WebsiteRequestors;
 
@@ -22,7 +21,7 @@ public class WebsiteRequestor : ActivityServiceBase, IWebsiteRequestor
     /// <param name="address">The wesbite address.</param>
     public async Task RequestWebsite(string address)
     {
-            var intent = new Intent(Intent.ActionView, Uri.Parse(address));
+            var intent = new Intent(Intent.ActionView, Android.Net.Uri.Parse(address));
             Activity.StartActivity(intent);
         }
 }

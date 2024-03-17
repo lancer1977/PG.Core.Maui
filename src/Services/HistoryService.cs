@@ -1,25 +1,3 @@
-
-/* Unmerged change from project 'PolyhydraGames.Core.Maui (net7.0-ios)'
-Before:
-using System.Collections.ObjectModel;
-using DynamicData;
-using PolyhydraGames.Core.Interfaces;
-After:
-using DynamicData;
-using PolyhydraGames.Core.Interfaces;
-using System.Collections.ObjectModel;
-*/
-
-/* Unmerged change from project 'PolyhydraGames.Core.Maui (net7.0-windows10.0.22621.0)'
-Before:
-using System.Collections.ObjectModel;
-using DynamicData;
-using PolyhydraGames.Core.Interfaces;
-After:
-using DynamicData;
-using PolyhydraGames.Core.Interfaces;
-using System.Collections.ObjectModel;
-*/
 namespace PolyhydraGames.Core.Maui.Services;
 
 public class HistoryService : IHistoryService

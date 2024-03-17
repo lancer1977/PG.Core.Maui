@@ -2,6 +2,7 @@ using System.Diagnostics;
 
 namespace PolyhydraGames.Core.Maui.Views
 {
+
     public abstract class TabbedViewModelBase : ViewModelAsyncBase
     {
         private readonly IServiceProvider _provider;
