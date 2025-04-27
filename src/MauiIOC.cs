@@ -1,9 +1,14 @@
-﻿namespace PolyhydraGames.Core.Maui;
+﻿using Microsoft.Extensions.Logging;
+
+namespace PolyhydraGames.Core.Maui;
 
 public class MauiIOC : IIOCContainer
 {
-    public MauiIOC(MauiContext context)
+    private readonly ILogger<MauiIOC> _log;
+
+    public MauiIOC(ILogger<MauiIOC> log, MauiContext context)
     {
+        _log = log;
         Context = context;
     }
 
@@ -31,12 +36,20 @@ public class MauiIOC : IIOCContainer
 
     public object Resolve(Type type)
     {
-        return Context.Services.GetService(type) ?? throw new InvalidOperationException();
+        return Context.Services.GetService(type) ?? NotFound(type);
     }
 
+    
+    private object NotFound(Type type)
+    {
+
+        var error = new InvalidOperationException($"{type.Name} was not found in IOC container.");
+        _log.LogCritical(error, "IOC");
+        throw error;
+    }
+    [Obsolete]
     public void Setup(List<IIOCRegistration> registrations)
     {
-        throw new NotImplementedException(
-            "I feel this is too brittle and not well maintained. The basic IOC container will be respected.");
+        throw new NotImplementedException("I feel this is too brittle and not well maintained. The basic IOC container will be respected.");
     }
 }

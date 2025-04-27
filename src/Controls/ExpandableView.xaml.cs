@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using System.Collections;
+using System.Windows.Input;
 using CommunityToolkit.Maui.Views;
 
 
@@ -7,6 +8,7 @@ namespace PFAssistant.Maui.Controls;
 [XamlCompilation(XamlCompilationOptions.Compile)]
 public partial class ExpandableView : ContentView
 {
+    public ICommand ItemClickCommand { get; set; }
     public ICommand TitleTapped { get; }
     public ExpandableView()
     {
@@ -17,7 +19,7 @@ public partial class ExpandableView : ContentView
             expand.IsExpanded = !expand.IsExpanded;
         });
 
-        titleStack.GestureRecognizers.Add(new TapGestureRecognizer(){Command = TitleTapped });
+        titleStack.GestureRecognizers.Add(new TapGestureRecognizer() { Command = TitleTapped });
     }
     public static readonly BindableProperty SymbolProperty =
       BindableProperty.Create(nameof(Symbol), typeof(string), typeof(ExpandableView), null, propertyChanged:
@@ -26,6 +28,20 @@ public partial class ExpandableView : ContentView
               var view = (ExpandableView)bindable;
               view.SymbolLabel.Text = newValue as string;
           });
+
+    public static readonly BindableProperty ItemSourceProperty = BindableProperty.Create(nameof(ItemSource), typeof(IList), typeof(ExpandableView), null, propertyChanged:
+        (bindable, value, newValue) =>
+        {
+            var view = (ExpandableView)bindable;
+            BindableLayout.SetItemsSource(view.itemsStack, newValue as IList);
+        });
+
+    public IList ItemSource
+    {
+        get { return (IList)GetValue(ItemSourceProperty); }
+        set { SetValue(ItemSourceProperty, value); }
+    }
+
 
     public string Symbol
     {
@@ -107,5 +123,7 @@ public partial class ExpandableView : ContentView
         {
             Expander.ForceLayout();
         }
+
+        Task.Delay(1);
     }
 }

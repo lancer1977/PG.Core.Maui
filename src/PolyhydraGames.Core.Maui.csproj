@@ -24,18 +24,19 @@
 		<Compile Remove="**\*net.cs" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="CommunityToolkit.Maui" Version="7.0.1" />
-		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.7" />
-		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.7" />
-		<PackageReference Include="Mopups" Version="1.3.0" />
-		<PackageReference Include="Plugin.Maui.Audio" Version="2.1.0" />
-		<PackageReference Include="PolyhydraGames.Core.Global" Version="1.0.3.4" />
-		<PackageReference Include="PolyhydraGames.Core.Interfaces" Version="2.0.0.36" />
+		<PackageReference Include="CommunityToolkit.Maui" Version="9.1.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.2" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.92" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.92" />
+		<PackageReference Include="Mopups" Version="1.3.2" />
+		<PackageReference Include="Plugin.Maui.Audio" Version="3.0.1" />
+		<PackageReference Include="PolyhydraGames.Core.Global" Version="1.0.3.8" />
+		<PackageReference Include="PolyhydraGames.Core.Interfaces" Version="2.0.0.41" />
 		<PackageReference Include="PolyhydraGames.Core.IOC" Version="1.0.1.1" />
-		<PackageReference Include="PolyhydraGames.Core.ReactiveUI" Version="1.0.0.44" />
-		<PackageReference Include="PolyhydraGames.Extensions" Version="2.1.1.49" />
-		<PackageReference Include="ReactiveUI" Version="19.5.41" />
-		<PackageReference Include="ReactiveUI.Fody" Version="19.5.41" />
+		<PackageReference Include="PolyhydraGames.Core.ReactiveUI" Version="1.0.0.48" />
+		<PackageReference Include="PolyhydraGames.Extensions" Version="2.1.1.52" />
+		<PackageReference Include="ReactiveUI" Version="20.1.63" />
+		<PackageReference Include="ReactiveUI.Fody" Version="$(ReactiveUIVersion)" />
 	</ItemGroup>
  
 	<ItemGroup>
@@ -70,6 +71,10 @@
 
 	<ItemGroup>
 	  <Folder Include="Platforms\Net80\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Update="SonarAnalyzer.CSharp" Version="9.32.0.97167" />
 	</ItemGroup>
 
 </Project>

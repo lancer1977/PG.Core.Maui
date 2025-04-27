@@ -13,6 +13,8 @@ After:
 using PolyhydraGames.Core.Interfaces;
 */
 
+using Microsoft.Extensions.Logging;
+
 namespace PolyhydraGames.Core.Maui.Setup;
 
 public static class MauiSetup
@@ -32,7 +34,7 @@ public static class MauiSetup
     {
         builder.Services.AddSingleton<IIOCContainer, MauiIOC>(x =>
             {
-                var ioc = new MauiIOC(new MauiContext(x));
+                var ioc = new MauiIOC(x.GetRequiredService<ILogger<MauiIOC>>(),new MauiContext(x));
                 IOC.IOC.Initialize(ioc);
                 return ioc;
             }

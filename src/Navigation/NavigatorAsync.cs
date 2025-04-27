@@ -155,7 +155,7 @@ public class NavigatorAsync : INavigatorAsync
     public async Task SetRoot<TViewModel>(Func<TViewModel, Task> setStateFunc = null)
         where TViewModel : class, IViewModelAsync
     {
-        var view = await _viewFactory.ResolveAsync<TViewModel>(setStateFunc);
+        var view = await _viewFactory.ResolveAsync(setStateFunc);
         Application.Current.MainPage = view;
     }
 

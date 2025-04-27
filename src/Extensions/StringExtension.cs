@@ -1,3 +1,4 @@
+using Microsoft.Extensions.Configuration;
 using System.Text.RegularExpressions;
 using Color = Microsoft.Maui.Graphics.Color;
 
@@ -37,3 +38,12 @@ public static class ColorExtensions
 
 }
 
+public static class ConfigHelpers
+{
+    public static T GetPlatformOption<T>(this IConfiguration config, string key)
+    {
+        var section = config.GetSection(DeviceInfo.Platform.ToString()).GetSection(key);
+        return ConfigurationBinder.Get<T>(section);
+        //section.Get<T>( ); 
+    }
+}
