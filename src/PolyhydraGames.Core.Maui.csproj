@@ -1,12 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net8.0;net8.0-android;net8.0-ios;</TargetFrameworks>
-		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows10.0.19041.0</TargetFrameworks>
+		<TargetFrameworks>net9.0;net9.0-android;net9.0-ios;</TargetFrameworks>
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net9.0-windows10.0.19041.0</TargetFrameworks>
 		<!-- 
-		net8.0-maccatalyst
+		net9.0-maccatalyst
 		Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
-		<!-- <TargetFrameworks>$(TargetFrameworks);net8.0-tizen</TargetFrameworks> -->
+		<!-- <TargetFrameworks>$(TargetFrameworks);net9.0-tizen</TargetFrameworks> -->
 		<UseMaui>true</UseMaui>
 		<SingleProject>true</SingleProject>
 		<ImplicitUsings>enable</ImplicitUsings>
@@ -19,23 +19,23 @@
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 	</PropertyGroup>
-	<ItemGroup Condition="'$(TargetFramework)' != 'net8.0'">
+	<ItemGroup Condition="'$(TargetFramework)' != 'net9.0'">
 		<None Include="**\*net.cs" />
 		<Compile Remove="**\*net.cs" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="CommunityToolkit.Maui" Version="9.1.0" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.2" />
-		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.92" />
-		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.92" />
-		<PackageReference Include="Mopups" Version="1.3.2" />
-		<PackageReference Include="Plugin.Maui.Audio" Version="3.0.1" />
-		<PackageReference Include="PolyhydraGames.Core.Global" Version="1.0.3.8" />
-		<PackageReference Include="PolyhydraGames.Core.Interfaces" Version="2.0.0.41" />
+		<PackageReference Include="CommunityToolkit.Maui" Version="12.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="9.0.6" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="9.0.80" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="9.0.80" />
+		<PackageReference Include="Mopups" Version="1.3.4" />
+		<PackageReference Include="Plugin.Maui.Audio" Version="4.0.0" />
+		<PackageReference Include="PolyhydraGames.Core.Global" Version="1.0.3.9" />
+		<PackageReference Include="PolyhydraGames.Core.Interfaces" Version="2.0.0.43" />
 		<PackageReference Include="PolyhydraGames.Core.IOC" Version="1.0.1.1" />
-		<PackageReference Include="PolyhydraGames.Core.ReactiveUI" Version="1.0.0.48" />
-		<PackageReference Include="PolyhydraGames.Extensions" Version="2.1.1.52" />
-		<PackageReference Include="ReactiveUI" Version="20.1.63" />
+		<PackageReference Include="PolyhydraGames.Core.ReactiveUI" Version="1.0.0.49" />
+		<PackageReference Include="PolyhydraGames.Extensions" Version="2.1.1.56" />
+		<PackageReference Include="ReactiveUI" Version="20.3.1" />
 		<PackageReference Include="ReactiveUI.Fody" Version="$(ReactiveUIVersion)" />
 	</ItemGroup>
  
@@ -70,11 +70,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Platforms\Net80\" />
+	  <Folder Include="Platforms\net90\" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Update="SonarAnalyzer.CSharp" Version="9.32.0.97167" />
+	  <PackageReference Update="SonarAnalyzer.CSharp" Version="10.12.0.118525" />
 	</ItemGroup>
 
 </Project>
