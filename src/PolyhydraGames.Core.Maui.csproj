@@ -30,10 +30,10 @@
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="9.0.80" />
 		<PackageReference Include="Mopups" Version="1.3.4" />
 		<PackageReference Include="Plugin.Maui.Audio" Version="4.0.0" />
-		<PackageReference Include="PolyhydraGames.Core.Global" Version="1.0.3.9" />
+		<PackageReference Include="PolyhydraGames.Core.Global" Version="1.0.3.10" />
 		<PackageReference Include="PolyhydraGames.Core.Interfaces" Version="2.0.0.43" />
 		<PackageReference Include="PolyhydraGames.Core.IOC" Version="1.0.1.1" />
-		<PackageReference Include="PolyhydraGames.Core.ReactiveUI" Version="1.0.0.49" />
+		<PackageReference Include="PolyhydraGames.Core.ReactiveUI" Version="1.0.0.50" />
 		<PackageReference Include="PolyhydraGames.Extensions" Version="2.1.1.56" />
 		<PackageReference Include="ReactiveUI" Version="20.3.1" />
 		<PackageReference Include="ReactiveUI.Fody" Version="$(ReactiveUIVersion)" />
