@@ -1,7 +1,4 @@
-﻿
-//using PolyhydraGames.Core.Maui.Services.AppLauncher;
-//using PolyhydraGames.Core.Maui.Services.AvailiableAppsServices;
-using PolyhydraGames.Core.Maui.Services.Email;
+﻿using PolyhydraGames.Core.Maui.Services.Email;
 using PolyhydraGames.Core.Maui.Services.Folders;
 using PolyhydraGames.Core.Maui.Services.StatusBar;
 using PolyhydraGames.Core.Maui.Services.WebsiteRequestors;
@@ -22,11 +19,4 @@ public partial class DeviceModule
         //builder.Register((ctx) => Plugin.Settings.CrossSettings.Current).As<ISettings>();
         return builder;
     }
-    //email
-    //folder
-    //website
-    //IDialogService
-
-    //IItemPicker
-    //IStatusBarManager
 }
