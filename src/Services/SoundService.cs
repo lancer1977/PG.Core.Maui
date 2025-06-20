@@ -27,7 +27,9 @@ public class SoundService : ISoundService
 
     private async Task<IAudioPlayer> GetAudioPlayer(string key)
     {
-        return _soundCache.ContainsKey(key) ? _soundCache[key] : await CreateMediaPlayer(key);
+        return _soundCache.TryGetValue(key, out var value) 
+            ? value 
+            : await CreateMediaPlayer(key);
     }
     public async Task Play(string value, bool loop = false)
     {

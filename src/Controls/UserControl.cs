@@ -11,7 +11,7 @@ public class UserControl : Frame
 
     protected T FindByViewPrivate<T>(string name)
     {
-        if (_cache.ContainsKey(name)) return (T)_cache[name];
+        if (_cache.TryGetValue(name, out var value1)) return (T)value1;
 
         var value = this.FindByField<T>(name);
         _cache.Add(name, value);
@@ -24,8 +24,8 @@ public class UserControl : Frame
 
         var t = GetType();
         var fi = t.GetRuntimeFields().FirstOrDefault(f => f.Name == name);
-        if (fi == null) throw new NullReferenceException(string.Format("Field {0} not found.", name));
-        var value = (T)fi.GetValue(this);
+        if (fi == null) throw new NullReferenceException($"Field {name} not found.");
+        var value = (T) fi.GetValue(this);
         _cache.Add(name, value);
         return value;
     }
