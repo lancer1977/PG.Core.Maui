@@ -1,18 +1,4 @@
 ﻿
-/* Unmerged change from project 'PolyhydraGames.Core.Maui (net7.0-ios)'
-Before:
-using System.Reflection;
-After:
-using PolyhydraGames.Core.Interfaces;
-*/
-
-/* Unmerged change from project 'PolyhydraGames.Core.Maui (net7.0-windows10.0.22621.0)'
-Before:
-using System.Reflection;
-After:
-using PolyhydraGames.Core.Interfaces;
-*/
-
 using Microsoft.Extensions.Logging;
 
 namespace PolyhydraGames.Core.Maui.Setup;
