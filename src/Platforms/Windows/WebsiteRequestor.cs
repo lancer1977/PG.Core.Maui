@@ -5,9 +5,10 @@ public class WebsiteRequestor : IWebsiteRequestor
 {
     private readonly IBrowser _browser;
 
-    public WebsiteRequestor(IBrowser browser)
+    public WebsiteRequestor( )
     {
-        _browser = browser;
+        _browser = Browser.Default;
+        
     }
     public async Task RequestWebsite(string address)
     {
