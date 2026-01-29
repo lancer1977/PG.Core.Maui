@@ -40,7 +40,7 @@
 		<PackageReference Include="PolyhydraGames.Core.Global" Version="1.0.3.11" />
 		<PackageReference Include="PolyhydraGames.Core.Interfaces" Version="2.0.0.44" />
 		<PackageReference Include="PolyhydraGames.Core.IOC" Version="1.0.1.1" />
-		<PackageReference Include="PolyhydraGames.Core.ReactiveUI" Version="1.0.0.52" />
+		<PackageReference Include="PolyhydraGames.Core.ReactiveUI" Version="1.0.0.53" />
 		<PackageReference Include="PolyhydraGames.Extensions" Version="2.1.1.59" />
 		<PackageReference Include="ReactiveUI" Version="22.2.1" />
 		<PackageReference Include="ReactiveUI.Fody" Version="19.5.41" />
