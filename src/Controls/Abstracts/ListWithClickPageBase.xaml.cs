@@ -1,5 +1,9 @@
-﻿namespace PolyhydraGames.Core.Maui.Controls.Abstracts;
+namespace PolyhydraGames.Core.Maui.Controls.Abstracts;
 
+/// <summary>
+/// Legacy list page from Xamarin.Forms. Consider using CollectionView with SelectionChanged instead.
+/// </summary>
+[Obsolete("ListWithClickPageBase is a legacy Xamarin.Forms pattern. Use CollectionView with SelectionChanged for MAUI compatibility.")]
 public partial class ListWithClickPageBase : PageBase
 {
     public ListWithClickPageBase()

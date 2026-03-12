@@ -1,5 +1,9 @@
-﻿
 namespace PolyhydraGames.Core.Maui.Controls;
+
+/// <summary>
+/// Legacy text view from Xamarin.Forms. Consider using Label directly instead.
+/// </summary>
+[Obsolete("TextView is a legacy control. Use Label with BindableProperty for MAUI compatibility.")]
 public partial class TextView
 {
     public TextView()

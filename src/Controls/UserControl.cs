@@ -1,5 +1,9 @@
 namespace PolyhydraGames.Core.Maui.Controls;
 
+/// <summary>
+/// Legacy control from Xamarin.Forms. Consider using modern MAUI ContentView instead.
+/// </summary>
+[Obsolete("UserControl is a legacy Xamarin.Forms pattern. Use ContentView directly or create a custom control inheriting from ContentView for better MAUI compatibility.")]
 public class UserControl : Frame
 {
     private readonly Dictionary<string, object> _cache = new();

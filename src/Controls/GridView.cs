@@ -3,8 +3,9 @@ using System.Collections;
 namespace PolyhydraGames.Core.Maui.Controls;
 
 /// <summary>
-///     Class GridView.
+///     Legacy grid view from Xamarin.Forms. Consider using CollectionView with GridItemsLayout instead.
 /// </summary>
+[Obsolete("GridView is a legacy control. Use CollectionView with GridItemsLayout for better performance and MAUI compatibility.")]
 public class GridView : ContentView
 {
     //

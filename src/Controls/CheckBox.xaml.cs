@@ -1,5 +1,9 @@
-﻿namespace PolyhydraGames.Core.Maui.Controls
+namespace PolyhydraGames.Core.Maui.Controls
 {
+    /// <summary>
+    /// Legacy custom checkbox from Xamarin.Forms. MAUI now has a built-in CheckBox control.
+    /// </summary>
+    [Obsolete("Custom Checkbox is a legacy control. Use MAUI's built-in CheckBox control instead.")]
     public partial class Checkbox 
     {
         public Checkbox()

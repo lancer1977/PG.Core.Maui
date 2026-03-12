@@ -1,4 +1,4 @@
-﻿/* Unmerged change from project 'PolyhydraGames.Core.Maui (net7.0-ios)'
+/* Unmerged change from project 'PolyhydraGames.Core.Maui (net7.0-ios)'
 Before:
 using Microsoft.Maui.Controls;
 After:
@@ -16,6 +16,10 @@ using System.Windows.Input;
 
 namespace PolyhydraGames.Core.Maui.Controls;
 
+/// <summary>
+/// Legacy label button from Xamarin.Forms. Consider using Label with TapGestureRecognizer directly instead.
+/// </summary>
+[Obsolete("LabelButton is a legacy control. Use Label with TapGestureRecognizer for MAUI compatibility.")]
 public partial class LabelButton : Label
 {
     public static readonly BindableProperty CommandProperty = BindableProperty.Create("CommandProperty",

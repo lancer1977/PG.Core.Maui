@@ -1,5 +1,9 @@
 ﻿namespace PolyhydraGames.Core.Maui.Controls;
 
+/// <summary>
+/// Legacy list page from Xamarin.Forms. Consider using CollectionView with DataTemplateSelector instead.
+/// </summary>
+[Obsolete("ListPageBase is a legacy Xamarin.Forms pattern. Use CollectionView with DataTemplateSelector for better performance and MAUI compatibility.")]
 public partial class ListPageBase : ContentPage
 {
     public ListPageBase()
