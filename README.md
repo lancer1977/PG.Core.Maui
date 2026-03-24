@@ -32,3 +32,8 @@ Some of these I am leaving intact to support porting if they don't feel too obno
 ![[Controls]]
 
 [[Converters]]
+
+## 📖 Documentation
+Detailed documentation can be found in the following sections:
+- [Feature Index](./docs/features/README.md)
+- [Core Capabilities](./docs/features/core-capabilities.md)
