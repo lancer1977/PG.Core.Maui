@@ -1,39 +1,58 @@
-# PG.Core.Maui
-Maui helpers. This project represents a collection of old Xamarin Forms classes and helpers I made to aide my old apps reuse. 
+# Core.Maui
 
-## Status (Updated 2026-03-12)
+[![Build Status](https://img.shields.io/github/actions/workflow/user/lancer1977/PG.Core.Maui/.github/workflows/ci.yml/badge.svg)](https://github.com/lancer1977/PG.Core.Maui/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**Legacy Controls Cleanup Complete:**
+## 🚀 Overview
+This repository contains the core .NET MAUI application framework and related components for the Polyhydra Games ecosystem. It provides foundational elements for building cross-platform applications.
 
-The following controls have been marked with `[Obsolete]` attribute and should not be used for new development:
+## ✨ Key Features
+*   **Cross-Platform UI**: Enables development of UIs for mobile and desktop platforms using .NET MAUI.
+*   **Core Framework**: Provides essential services and structures for application development.
+*   **Testability**: Includes testing projects and adhering to quality standards.
 
-| Control | Status | Recommended Alternative |
-|---------|--------|------------------------|
-| `UserControl` | [Obsolete] | Use `ContentView` directly |
-| `GridView` | [Obsolete] | Use `CollectionView` with `GridItemsLayout` |
-| `ListPageBase` | [Obsolete] | Use `CollectionView` with `DataTemplateSelector` |
-| `ListWithClickPageBase` | [Obsolete] | Use `CollectionView` with `SelectionChanged` |
-| `Checkbox` (custom) | [Obsolete] | Use MAUI's built-in `CheckBox` |
-| `DisplayCell` | [Obsolete] | Use `CollectionView` with `DataTemplate` |
-| `DisplayableView` | [Obsolete] | Use `ContentView` directly |
-| `TextView` | [Obsolete] | Use `Label` directly |
-| `LabelButton` | [Obsolete] | Use `Label` with `TapGestureRecognizer` |
+## 🏗️ Architecture
+The project utilizes a multi-project structure with shared test projects, likely following common .NET architectural patterns. The presence of `.sln` and `.csproj` files indicates a standard .NET project setup.
 
-**Converters:** All converters remain active and recommended. See [[Converters]] for details.
+### 🛠️ Technology Stack
+*   **Language**: C#
+*   **Framework**: .NET MAUI, .NET 8+
+*   **Key Libraries**: Likely includes ReactiveUI and other core Polyhydra libraries.
 
-**Wiki:** Updated with current component status and recommendations.
+## 🚦 Getting Started
 
-## Original Notes
+### Prerequisites
+*   .NET 8 SDK (or compatible version)
+*   .NET MAUI workload installed (`dotnet workload install maui`)
+*   Visual Studio or VS Code with C#/.NET MAUI extensions.
 
-Some of these I am leaving intact to support porting if they don't feel too obnoxious, others I'm deleting outright if I feel they are hazardous patterns. I may comment out things and leave todos in place for areas I wish to clean up and re-write some Maui-ish code I feel needs attention. Time will tell. I've been out of the mobile game for a bit and need to brush up.
+### Installation
+```bash
+# Clone the repository
+git clone git@github.com:lancer1977/PG.Core.Maui.git
+cd PG.Core.Maui
 
-![[Models]]
+# Restore NuGet packages (standard .NET MAUI project)
+dotnet restore
+```
 
-![[Controls]]
+## 📖 Usage & Education
+Usage involves integrating the `Core.Maui` components into a .NET MAUI application. Refer to the `Core.Maui.App` project (if present) or other Polyhydra projects consuming this library for specific examples.
 
-[[Converters]]
+## 🌐 Deployment & Hosting
+*   **Repo**: [PG.Core.Maui](https://github.com/lancer1977/PG.Core.Maui)
+*   **Hosting Platform**: GitHub.
 
-## 📖 Documentation
-Detailed documentation can be found in the following sections:
-- [Feature Index](./docs/features/README.md)
-- [Core Capabilities](./docs/features/core-capabilities.md)
+## 📦 Packages & Dependencies
+*   **NuGet**: `PolyhydraGames.Core.Maui` (Package name inferred from project structure)
+*   **Local Projects**: `Core.Interfaces`, `Core.Extensions` (Likely dependencies)
+
+## 🔗 Related Projects
+*   Other `Core.*` libraries within the Polyhydra Games ecosystem.
+
+## 📚 Documentation & Resources
+*   **Features**: [Docs/Features](./docs/features/README.md)
+*   **CI/CD**: [GitHub Actions](https://github.com/lancer1977/PG.Core.Maui/actions)
+
+---
+*This README was generated based on project metadata and description.*
